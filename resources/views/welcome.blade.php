@@ -20,9 +20,9 @@
         @if (Route::has('login'))
             <div class="top-right links">
                 @auth
-                    <a href="{{ url('/home') }}">Home</a>
+                    <a href="{{ url('/home') }}">{{__("Home")}}</a>
                 @else
-                    <a href="{{ route('login') }}">Login</a>
+                    <a href="{{ route('login') }}">{{__("Login")}}</a>
                 @endauth
             </div>
         @endif
@@ -33,12 +33,12 @@
             </div>
 
             <div class="links">
-                <a target="_blank" href="https://www.cyber-duck.co.uk/">Site</a>
-                <a target="_blank" href="https://www.cyber-duck.co.uk/client-stories">Client Stories</a>
-                <a target="_blank" href="https://www.cyber-duck.co.uk/how-we-work">How we work</a>
-                <a target="_blank" href="https://www.cyber-duck.co.uk/our-culture">Culture</a>
-                <a target="_blank" href="https://www.cyber-duck.co.uk/insights">Insights</a>
-                <a target="_blank" href="https://www.cyber-duck.co.uk/contact-us">Contact-us</a>
+                <a target="_blank" href="https://www.cyber-duck.co.uk/">{{__("Site")}}</a>
+                <a target="_blank" href="https://www.cyber-duck.co.uk/client-stories">{{__("Client Stories")}}</a>
+                <a target="_blank" href="https://www.cyber-duck.co.uk/how-we-work">{{__("How we work")}}</a>
+                <a target="_blank" href="https://www.cyber-duck.co.uk/our-culture">{{__("Culture")}}</a>
+                <a target="_blank" href="https://www.cyber-duck.co.uk/insights">{{__("Insights")}}</a>
+                <a target="_blank" href="https://www.cyber-duck.co.uk/contact-us">{{__("Contact-us")}}</a>
             </div>
         </div>
     </div>

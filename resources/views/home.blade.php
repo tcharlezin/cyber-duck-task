@@ -2,44 +2,52 @@
 
 @section("title-page")
     <h1>
-        Blank page
-        <small>it all starts here</small>
+        {{__("Dashboard")}}
+        <small>{{__("resume of the CRM")}}</small>
     </h1>
 @endsection
 
 @section("breadcrumb")
     <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Examples</a></li>
-        <li class="active">Blank page</li>
+        <li class="active"><a href="#"><i class="fa fa-dashboard"></i> {{__("Dashboard")}}</a></li>
     </ol>
 @endsection
 
 @section('content')
 
-    <!-- Default box -->
-    <div class="box">
-        <div class="box-header with-border">
-            <h3 class="box-title">Title</h3>
+    <div class="row">
 
-            <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
-                        title="Collapse">
-                    <i class="fa fa-minus"></i></button>
-                <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip"
-                        title="Remove">
-                    <i class="fa fa-times"></i></button>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+
+            <div class="small-box bg-blue-gradient">
+                <div class="inner">
+                    <h3>{{\App\Models\Company::count()}}</h3>
+                    <p>{{__("Companies")}}</p>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-industry"></i>
+                </div>
+                <a href="{{route("manager.company.index")}}" class="small-box-footer">
+                    {{__("More info")}} <i class="fa fa-arrow-circle-right"></i>
+                </a>
             </div>
         </div>
-        <div class="box-body">
-            Start creating your amazing application!
+
+        <div class="col-md-3 col-sm-6 col-xs-12">
+
+            <div class="small-box bg-blue-gradient">
+                <div class="inner">
+                    <h3>{{\App\Models\Employee::count()}}</h3>
+                    <p>{{__("Employees")}}</p>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-users"></i>
+                </div>
+                <a href="{{route("manager.employee.index")}}" class="small-box-footer">
+                    {{__("More info")}} <i class="fa fa-arrow-circle-right"></i>
+                </a>
+            </div>
         </div>
-        <!-- /.box-body -->
-        <div class="box-footer">
-            Footer
-        </div>
-        <!-- /.box-footer-->
     </div>
-    <!-- /.box -->
 
 @endsection

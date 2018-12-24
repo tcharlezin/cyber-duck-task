@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="{{ asset("plugins/font-awesome/css/font-awesome.min.css") }}">
     <!-- Ionicons -->
     <link rel="stylesheet" href="{{ asset("plugins/Ionicons/css/ionicons.min.css") }}">
+    <!-- Select2 -->
+    <link rel="stylesheet" href="{{ asset("plugins/select2/dist/css/select2.min.css") }}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset("css/AdminLTE.min.css") }}">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -26,7 +28,8 @@
     <![endif]-->
 
     <!-- Google Font -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <!-- Site wrapper -->
@@ -60,6 +63,9 @@
 
         <!-- Main content -->
         <section class="content">
+
+            @include("errors._check")
+
             @yield("content")
         </section>
         <!-- /.content -->
@@ -82,14 +88,21 @@
 <script src="{{ asset("plugins/jquery-slimscroll/jquery.slimscroll.min.js") }}"></script>
 <!-- FastClick -->
 <script src="{{ asset("plugins/fastclick/lib/fastclick.js") }}"></script>
+<!-- Select2 -->
+<script src="{{ asset("plugins/select2/dist/js/select2.full.min.js") }}"></script>
 <!-- AdminLTE App -->
 <script src="{{ asset("js/adminlte.min.js") }}"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{ asset("js/demo.js") }}"></script>
+
 <script>
     $(document).ready(function () {
-        $('.sidebar-menu').tree()
+        $('.sidebar-menu').tree();
+        $('.select2').select2();
     })
 </script>
+
+@stack("scripts")
+
 </body>
 </html>

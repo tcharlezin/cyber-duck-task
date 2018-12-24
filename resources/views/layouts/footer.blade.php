@@ -1,5 +1,8 @@
 <div class="pull-right hidden-xs">
-    <b>Version</b> 2.4.0
+    <b>{{__("Version")}}</b> 1.0.0
 </div>
-<strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
-reserved.
+<strong>
+    {{__("Application of CRM created by")}}
+    <a href="http://github.com/tcharlezin" target="_blank">Tcharles Silva</a>
+    {{__("for PHP Developer Test on Cyber-Duck")}}.
+</strong>
